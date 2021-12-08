@@ -22,7 +22,7 @@ public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(name = "username")
     private String username;
@@ -33,7 +33,7 @@ public class User implements UserDetails {
     @Column(name = "Email")
     private String email;
 
-    public User(Long id, String username, String password, String email, Set <Role> roles) {
+    public User(int id, String username, String password, String email, Set <Role> roles) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -49,11 +49,11 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

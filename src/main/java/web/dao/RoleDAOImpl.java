@@ -27,7 +27,7 @@ public class RoleDAOImpl implements RoleDAO{
     }
 
     @Override
-    public void removeRoleById(long id) {
+    public void removeRoleById(int id) {
         entityManager.remove(entityManager.find(Role.class, id));
     }
 

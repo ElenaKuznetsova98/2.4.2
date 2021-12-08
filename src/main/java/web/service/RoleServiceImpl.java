@@ -31,7 +31,7 @@ public class RoleServiceImpl implements RoleService{
     }
 
     @Override
-    public void removeRoleById(long id) {
+    public void removeRoleById(int id) {
         roleDAO.removeRoleById(id);
     }
 
