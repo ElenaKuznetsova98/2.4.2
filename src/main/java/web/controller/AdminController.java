@@ -9,6 +9,7 @@ import web.service.RoleService;
 import web.service.UserService;
 
 
+
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
@@ -49,7 +50,7 @@ public class AdminController {
         return "edit";
     }
 
-    @GetMapping(value = "/edit")
+    @PatchMapping(value = "/edit")
     public String editUser(@ModelAttribute User user, @RequestParam(value = "nameRoles") String [] nameRoles) {
         user.setRoles(roleService.getSetOfRoles(nameRoles));
         userService.update(user);

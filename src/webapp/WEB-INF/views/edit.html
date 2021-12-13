@@ -8,8 +8,12 @@
 
 <div th:align="center">
     <h2>Edit User</h2>
-    <form action="/admin/edit" th:method="get">
+    <form action="/admin/edit" th:method="patch">
         <table th:border="1" th:cellpadding="5">
+            <tr>
+                <td>ID:</td>
+                <td><input type="text" th:field="*{user.id}" readonly/></td>
+            </tr>
             <tr>
                 <td>Name:</td>
                 <td><input type="text" th:field="*{user.username}"/></td>
@@ -22,7 +26,7 @@
                 <td>Password:</td>
                 <td><input type="text" th:field="*{user.password}"/></td>
             </tr>
-            <input type="checkbox" name="nameRoles" value="ROLE_USER"/>USER
+            <input type="checkbox" name="nameRoles" value="ROLE_USER"required>USER
             <input type="checkbox" name="nameRoles" value="ROLE_ADMIN"/>ADMIN
             <br/>
         </table>
